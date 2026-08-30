@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium SaaS Design Palette */
+  --color-slate-950: #08090D; /* Background: Deep rich dark space */
+  --color-slate-900: #111318; /* Surface: Neutral dark grey panels */
+  --color-slate-850: #161821; /* Alternative card surfaces */
+  --color-slate-800: #252936; /* Border color */
+  --color-slate-700: #34394a; /* Dividers and focus state borders */
+  --color-slate-600: #94A3B8; /* Muted text */
+  --color-slate-500: #94A3B8;
+  --color-slate-400: #F8FAFC; /* Main text */
+  --color-slate-350: #F8FAFC;
+  --color-slate-200: #F8FAFC;
+
+  /* Primary color: #8B5CF6 (Purple) */
+  --color-indigo-400: #8B5CF6;
+  --color-indigo-500: #7c3aed;
+  --color-indigo-600: #6d28d9;
+  --color-indigo-650: #8B5CF6;
+  --color-indigo-700: #5b21b6;
+  --color-indigo-950: #2e1065;
+
+  /* Secondary color: #14B8A6 (Teal) */
+  --color-emerald-400: #14B8A6;
+  --color-emerald-450: #14B8A6;
+  --color-emerald-500: #0d9488;
+  --color-emerald-600: #0f766e;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: #08090D;
+  --foreground: #F8FAFC;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
