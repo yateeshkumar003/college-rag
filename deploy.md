@@ -45,7 +45,10 @@ Render hosts the Node.js/Express server application.
    * **Instance Type:** `Free`
 
 ### Environment Variables:
-Under the **Environment Variables** section, add the following key-value pairs:
+Under the **Environment Variables** section, add the following key-value pairs. 
+
+> [!TIP]
+> You can open the local file **[`deploy_keys.txt`](file:///c:/Users/yatee/OneDrive/Desktop/collagerag/deploy_keys.txt)** in VS Code to easily copy and paste your actual production database connections, Gemini API keys, and Pinecone credentials (this file is gitignored for security).
 
 | Key | Value / Example |
 | :--- | :--- |

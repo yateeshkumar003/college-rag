@@ -37,3 +37,6 @@ server/uploads/
 uploads/
 logs/
 *.log
+
+# Deployment secrets
+deploy_keys.txt
