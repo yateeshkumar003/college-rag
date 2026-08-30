@@ -1217,22 +1217,24 @@ Checklist verifying project completion:
 
 ### Design System & Token Configuration
 - **Color Palette**:
-  - **Background**: `#08090D` (deep rich dark space)
-  - **Surface**: `#111318` (neutral dark grey panels)
-  - **Borders**: `#252936` (card borders and dividers)
-  - **Primary Accent**: `#8B5CF6` (violet/purple buttons and badges)
-  - **Secondary Accent**: `#14B8A6` (teal details and citations)
-  - **Primary Text**: `#F8FAFC`
-  - **Muted Text**: `#94A3B8`
+  - **Background**: `#F7F8FA` (clean academic portal light grey)
+  - **Primary Navy**: `#12233F` (headers, branding, logo)
+  - **Accent Blue**: `#2563EB` (interactive elements, buttons, links)
+  - **Primary Text**: `#172033` (charcoal grey)
+  - **Secondary Text**: `#667085` (supporting details, metadata)
+  - **Card / Surface**: `#FFFFFF` (crisp card elements)
+  - **Borders**: `#E4E7EC` (card borders and dividers)
+  - **Success / Verified**: `#16806A` (green for grounded statuses)
 - **Main UI Sections**:
-  - **Landing Page Hero**: Polished typography hierarchy and spaced layouts using modern AI/SaaS visual styles.
-  - **RAG Workflow Visualization**: Step-by-step visual map representing text parsing, chunking, Pinecone vector storage, and grounded generation.
-  - **True RAG Pillar Cards**: 6 consistent grid cards with subtle hover lift animations explaining system guarantees.
-  - **Chatbot Product Preview**: Mock student query chat logs demonstrating real-time sources citation badges.
-  - **Responsive Layout**: Adaptive design with flexible grid structures collapsing properly on tablet and mobile viewports.
+  - **Landing Page Hero**: Professional layout with Manrope/Inter typography, eyebrow header, and solid blue CTAs.
+  - **Chatbot Interface Mockup**: Product visual displaying grounded answers, retrieved sources, page citations, and relevance levels.
+  - **RAG Workflow Steps**: 6 numbered vertical steps describing parsing, embedding, storing in Pinecone, searching, generating, and outputting citations.
+  - **True RAG Pillar Flow**: Structured technical map outlining system pipeline guarantees.
+  - **Admin Experience Flow**: Clear steps explaining the document control cycle (Upload → Processing → Embedding → Indexed → Available).
+  - **Responsive Layout**: Fluid layouts adapting elegantly to mobile viewports with no horizontal overflow.
 
 ### Development History Checkpoints
 - **Files Created**: `server/src/scripts/createPineconeIndex.js`
-- **Files Modified**: `client/src/styles/globals.css`, `client/src/pages/index.js`, `server/src/services/embeddingService.js`, `server/src/services/llmService.js`, `server/src/services/vectorService.js`
-- **Testing Performed**: Verified client Next.js production build compiled successfully without warnings or errors.
-- **Current UI Status**: Completed all SaaS improvements and verified responsive grid behaviors.
+- **Files Modified**: `client/src/styles/globals.css`, `client/src/pages/index.js`, `client/src/components/AppShell/index.js`
+- **Testing Performed**: Verified Next.js production build runs successfully. Tested mobile viewports for horizontal alignment.
+- **Current UI Status**: REDESIGNED VISUALLY from scratch into a premium light-themed academic technology portal.
