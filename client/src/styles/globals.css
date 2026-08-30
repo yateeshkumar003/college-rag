@@ -1,38 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  /* Premium SaaS Design Palette */
-  --color-slate-950: #08090D; /* Background: Deep rich dark space */
-  --color-slate-900: #111318; /* Surface: Neutral dark grey panels */
-  --color-slate-850: #161821; /* Alternative card surfaces */
-  --color-slate-800: #252936; /* Border color */
-  --color-slate-700: #34394a; /* Dividers and focus state borders */
-  --color-slate-600: #94A3B8; /* Muted text */
-  --color-slate-500: #94A3B8;
-  --color-slate-400: #F8FAFC; /* Main text */
-  --color-slate-350: #F8FAFC;
-  --color-slate-200: #F8FAFC;
+  /* Light Mode Academic Portal Design System */
+  --color-slate-950: #F7F8FA; /* Background: Clean light grey */
+  --color-slate-900: #FFFFFF; /* Surface / Cards: Crisp white */
+  --color-slate-850: #FFFFFF; /* Alt cards */
+  --color-slate-800: #E4E7EC; /* Borders: Subtle light grey */
+  --color-slate-700: #D0D5DD; /* Dividers */
+  --color-slate-600: #667085; /* Muted/Secondary Text */
+  --color-slate-500: #667085;
+  --color-slate-400: #344054;
+  
+  /* Text mapping: redirect white text variables to rich dark text colors */
+  --color-slate-350: #172033;
+  --color-slate-200: #172033; /* Primary Text: Rich Charcoal */
+  --color-slate-100: #172033;
+  --color-slate-50: #12233F;  /* Primary Brand Navy */
 
-  /* Primary color: #8B5CF6 (Purple) */
-  --color-indigo-400: #8B5CF6;
-  --color-indigo-500: #7c3aed;
-  --color-indigo-600: #6d28d9;
-  --color-indigo-650: #8B5CF6;
-  --color-indigo-700: #5b21b6;
-  --color-indigo-950: #2e1065;
+  /* brand actions: Accent Blue (#2563EB) replacing default Indigo */
+  --color-indigo-400: #2563EB;
+  --color-indigo-500: #1D4ED8;
+  --color-indigo-600: #1E40AF;
+  --color-indigo-650: #2563EB;
+  --color-indigo-700: #1D4ED8;
+  --color-indigo-950: #EFF6FF; /* Accent tint bg */
 
-  /* Secondary color: #14B8A6 (Teal) */
-  --color-emerald-400: #14B8A6;
-  --color-emerald-450: #14B8A6;
-  --color-emerald-500: #0d9488;
-  --color-emerald-600: #0f766e;
+  /* success/grounded: Verified Green (#16806A) replacing default Emerald */
+  --color-emerald-400: #16806A;
+  --color-emerald-450: #16806A;
+  --color-emerald-500: #105D4E;
+  --color-emerald-600: #0B4035;
   
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  --background: #08090D;
-  --foreground: #F8FAFC;
+  --background: #F7F8FA;
+  --foreground: #172033;
 }
 
 html, body {

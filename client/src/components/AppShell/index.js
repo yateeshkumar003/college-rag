@@ -43,22 +43,22 @@ export default function AppShell({ children }) {
   const links = user?.role === 'admin' ? adminLinks : studentLinks;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#F7F8FA] text-[#172033] flex flex-col font-sans">
       {/* Top Navbar */}
-      <header className="border-b border-slate-900 bg-slate-950/80 backdrop-blur-md sticky top-0 z-40">
+      <header className="border-b border-[#E4E7EC] bg-white sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                <Sparkles className="w-5 h-5 text-white animate-pulse" />
+              <div className="w-9 h-9 rounded-xl bg-[#12233F] flex items-center justify-center shadow-sm">
+                <Sparkles className="w-5 h-5 text-white" />
               </div>
               <Link href={user ? (user.role === 'admin' ? '/admin' : '/dashboard') : '/'} className="flex flex-col">
-                <span className="font-bold text-lg leading-tight tracking-tight bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="font-extrabold text-lg leading-tight tracking-tight text-[#12233F]">
                   CollegeRAG
                 </span>
-                <span className="text-[10px] text-slate-500 font-medium uppercase tracking-widest leading-none">
+                <span className="text-[10px] text-[#667085] font-bold uppercase tracking-widest leading-none">
                   AI Info Portal
                 </span>
               </Link>
@@ -73,13 +73,13 @@ export default function AppShell({ children }) {
                   <Link 
                     key={link.path} 
                     href={link.path}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
                       active 
-                        ? 'bg-indigo-950/40 text-indigo-400 border border-indigo-900/50' 
-                        : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900/60'
+                        ? 'bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE]' 
+                        : 'text-[#667085] hover:text-[#12233F] hover:bg-[#F2F4F7]'
                     }`}
                   >
-                    <Icon className={`w-4.5 h-4.5 ${active ? 'text-indigo-400' : 'text-slate-400'}`} />
+                    <Icon className={`w-4.5 h-4.5 ${active ? 'text-[#2563EB]' : 'text-[#667085]'}`} />
                     <span>{link.name}</span>
                   </Link>
                 );
@@ -88,19 +88,19 @@ export default function AppShell({ children }) {
 
             {/* Profile Dropdown / Logout */}
             <div className="hidden md:flex items-center space-x-4">
-              <div className="flex items-center space-x-3 border-r border-slate-900 pr-4">
-                <div className="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-indigo-400 font-semibold text-sm">
+              <div className="flex items-center space-x-3 border-r border-[#E4E7EC] pr-4">
+                <div className="w-8 h-8 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center text-[#2563EB] font-bold text-sm">
                   {user?.name ? user.name[0].toUpperCase() : 'U'}
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xs font-semibold text-slate-200">{user?.name}</span>
-                  <span className="text-[10px] text-slate-500 font-medium capitalize">{user?.role}</span>
+                  <span className="text-xs font-bold text-[#172033]">{user?.name}</span>
+                  <span className="text-[10px] text-[#667085] font-semibold capitalize">{user?.role}</span>
                 </div>
               </div>
 
               <button
                 onClick={handleLogout}
-                className="flex items-center space-x-2 px-3 py-1.5 rounded-lg text-sm font-medium text-rose-400 hover:text-rose-300 hover:bg-rose-950/20 transition-all border border-transparent hover:border-rose-900/30"
+                className="flex items-center space-x-2 px-3 py-1.5 rounded-lg text-sm font-semibold text-[#D92D20] hover:bg-[#FEF3F2] border border-[#FDA29B] hover:border-[#F04438] transition-all"
               >
                 <LogOut className="w-4 h-4" />
                 <span>Logout</span>
@@ -111,7 +111,7 @@ export default function AppShell({ children }) {
             <div className="md:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-100 focus:outline-none"
+                className="p-2 rounded-lg bg-white border border-[#E4E7EC] text-[#667085] hover:text-[#172033] focus:outline-none"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -122,14 +122,14 @@ export default function AppShell({ children }) {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-900 bg-slate-950/95 backdrop-blur-lg px-4 pt-2 pb-4 space-y-1">
-            <div className="px-3 py-3 border-b border-slate-900 flex items-center space-x-3 mb-2">
-              <div className="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-indigo-400 font-semibold">
+          <div className="md:hidden border-t border-[#E4E7EC] bg-white px-4 pt-2 pb-4 space-y-1 shadow-lg">
+            <div className="px-3 py-3 border-b border-[#E4E7EC] flex items-center space-x-3 mb-2">
+              <div className="w-9 h-9 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center text-[#2563EB] font-bold">
                 {user?.name ? user.name[0].toUpperCase() : 'U'}
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-semibold text-slate-200">{user?.name}</span>
-                <span className="text-xs text-slate-500 capitalize">{user?.role}</span>
+                <span className="text-sm font-bold text-[#172033]">{user?.name}</span>
+                <span className="text-xs text-[#667085] capitalize">{user?.role}</span>
               </div>
             </div>
             {links.map((link) => {
@@ -140,10 +140,10 @@ export default function AppShell({ children }) {
                   key={link.path}
                   href={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center space-x-3 px-3 py-2.5 rounded-lg text-base font-medium transition-all ${
+                  className={`flex items-center space-x-3 px-3 py-2.5 rounded-lg text-base font-semibold transition-all ${
                     active
-                      ? 'bg-indigo-950/50 text-indigo-400 border border-indigo-900/60'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900'
+                      ? 'bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE]'
+                      : 'text-[#667085] hover:text-[#12233F] hover:bg-[#F2F4F7]'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -156,7 +156,7 @@ export default function AppShell({ children }) {
                 setMobileMenuOpen(false);
                 handleLogout();
               }}
-              className="w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-base font-medium text-rose-400 hover:bg-rose-950/20 transition-all border border-transparent hover:border-rose-900/30"
+              className="w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-base font-semibold text-[#D92D20] hover:bg-[#FEF3F2] border border-[#FDA29B] hover:border-[#F04438] transition-all"
             >
               <LogOut className="w-5 h-5" />
               <span>Logout</span>
@@ -171,8 +171,8 @@ export default function AppShell({ children }) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900/60 py-4 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 text-center text-xs text-slate-600">
+      <footer className="border-t border-[#E4E7EC] py-6 bg-white">
+        <div className="max-w-7xl mx-auto px-4 text-center text-xs text-[#667085] font-semibold">
           CollegeRAG © 2026. Built with Google Gemini & Pinecone.
         </div>
       </footer>
