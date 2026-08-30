@@ -35,10 +35,12 @@
   --foreground: #F8FAFC;
 }
 
-body {
+html, body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
 }
