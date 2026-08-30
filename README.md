@@ -1230,11 +1230,11 @@ Checklist verifying project completion:
   - **Chatbot Interface Mockup**: Product visual displaying grounded answers, retrieved sources, page citations, and relevance levels.
   - **RAG Workflow Steps**: 6 numbered vertical steps describing parsing, embedding, storing in Pinecone, searching, generating, and outputting citations.
   - **True RAG Pillar Flow**: Structured technical map outlining system pipeline guarantees.
-  - **Admin Experience Flow**: Clear steps explaining the document control cycle (Upload → Processing → Embedding → Indexed → Available).
+  - **Student Dashboard layout**: Visual double-column grid layout containing Left Sidebar (Brand, Nav links, Profile metadata), Top User status bar, Welcome Banner, stats blocks, Suggested Queries list, and a clean informational footer.
   - **Responsive Layout**: Fluid layouts adapting elegantly to mobile viewports with no horizontal overflow.
 
 ### Development History Checkpoints
 - **Files Created**: `server/src/scripts/createPineconeIndex.js`
-- **Files Modified**: `client/src/styles/globals.css`, `client/src/pages/index.js`, `client/src/components/AppShell/index.js`
+- **Files Modified**: `client/src/styles/globals.css`, `client/src/pages/index.js`, `client/src/components/AppShell/index.js`, `client/src/pages/dashboard.js`
 - **Testing Performed**: Verified Next.js production build runs successfully. Tested mobile viewports for horizontal alignment.
 - **Current UI Status**: REDESIGNED VISUALLY from scratch into a premium light-themed academic technology portal.
